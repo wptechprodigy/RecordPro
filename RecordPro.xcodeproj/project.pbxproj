@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0428BD8D25665A4400921626 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428BD8C25665A4400921626 /* Constants.swift */; };
+		0428BD992566EAED00921626 /* RecordProController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428BD982566EAED00921626 /* RecordProController+Extension.swift */; };
 		F4F7AE471DACE47C003197E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F7AE461DACE47C003197E6 /* AppDelegate.swift */; };
 		F4F7AE4C1DACE47C003197E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F7AE4A1DACE47C003197E6 /* Main.storyboard */; };
 		F4F7AE4E1DACE47C003197E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F7AE4D1DACE47C003197E6 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		0428BD8C25665A4400921626 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0428BD982566EAED00921626 /* RecordProController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecordProController+Extension.swift"; sourceTree = "<group>"; };
 		F4F7AE431DACE47C003197E6 /* RecordPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F7AE461DACE47C003197E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F7AE4B1DACE47C003197E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0428BD962566EABE00921626 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0428BD982566EAED00921626 /* RecordProController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0428BD972566EAC700921626 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				0428BD8C25665A4400921626 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		0428BD9C2566F0E000921626 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4F7AE581DACF2AA003197E6 /* RecordProController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0428BD9D2566F11400921626 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F4F7AE4A1DACE47C003197E6 /* Main.storyboard */,
+				F4F7AE4D1DACE47C003197E6 /* Assets.xcassets */,
+				F4F7AE4F1DACE47C003197E6 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F4F7AE3A1DACE47C003197E6 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +92,12 @@
 		F4F7AE451DACE47C003197E6 /* RecordPro */ = {
 			isa = PBXGroup;
 			children = (
+				0428BD9D2566F11400921626 /* Views */,
+				0428BD9C2566F0E000921626 /* Controllers */,
+				0428BD972566EAC700921626 /* Constants */,
+				0428BD962566EABE00921626 /* Extensions */,
 				F4F7AE461DACE47C003197E6 /* AppDelegate.swift */,
-				F4F7AE4A1DACE47C003197E6 /* Main.storyboard */,
-				F4F7AE4D1DACE47C003197E6 /* Assets.xcassets */,
-				F4F7AE4F1DACE47C003197E6 /* LaunchScreen.storyboard */,
 				F4F7AE521DACE47C003197E6 /* Info.plist */,
-				F4F7AE581DACF2AA003197E6 /* RecordProController.swift */,
-				0428BD8C25665A4400921626 /* Constants.swift */,
 			);
 			path = RecordPro;
 			sourceTree = "<group>";
@@ -142,6 +177,7 @@
 			files = (
 				F4F7AE591DACF2AA003197E6 /* RecordProController.swift in Sources */,
 				F4F7AE471DACE47C003197E6 /* AppDelegate.swift in Sources */,
+				0428BD992566EAED00921626 /* RecordProController+Extension.swift in Sources */,
 				0428BD8D25665A4400921626 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

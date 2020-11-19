@@ -35,3 +35,7 @@ enum AudioPlayingConstants {
     static let title = "Finish Playing"
     static let message = "Finish playing the recording!"
 }
+
+enum TimeLabelConstants {
+    static let format = "%02d:%02d"
+}

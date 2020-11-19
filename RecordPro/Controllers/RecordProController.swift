@@ -10,13 +10,16 @@ import UIKit
 import AVFoundation
 
 class RecordProController: UIViewController, AVAudioPlayerDelegate {
+    var timer: Timer?
+    var elapsedTimeInSeconds: Int = 0
+    
     var audioRecorder: AVAudioRecorder?
     var audioPlayer: AVAudioPlayer?
     
     @IBOutlet private var stopButton: UIButton!
     @IBOutlet private var playButton: UIButton!
     @IBOutlet private var recordButton: UIButton!
-    @IBOutlet private var timeLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +94,7 @@ class RecordProController: UIViewController, AVAudioPlayerDelegate {
         
         // Stop the audio recorder
         audioRecorder?.stop()
+        resetTimer()
         
         // Disable the AVAudioRecorder
         let audioSession = AVAudioSession.sharedInstance()
@@ -109,6 +113,7 @@ class RecordProController: UIViewController, AVAudioPlayerDelegate {
                 audioPlayer = try? AVAudioPlayer(contentsOf: recorder.url)
                 audioPlayer?.delegate = self
                 audioPlayer?.play()
+                startTimer()
             }
         }
     }
@@ -130,6 +135,7 @@ class RecordProController: UIViewController, AVAudioPlayerDelegate {
                     
                     // Start recording
                     recorder.record()
+                    startTimer()
                     
                     // Change to the pause image
                     recordButton.setImage(UIImage(named: ControlConstants.pause),
@@ -140,6 +146,7 @@ class RecordProController: UIViewController, AVAudioPlayerDelegate {
             } else {
                 // Pause recording
                 recorder.pause()
+                pauseTimer()
                 
                 // Change back to the record button
                 recordButton.setImage(UIImage(named: ControlConstants.record),
@@ -164,7 +171,10 @@ class RecordProController: UIViewController, AVAudioPlayerDelegate {
                                       style: .default,
                                       handler: nil))
         
+        resetTimer()
         present(alert, animated: true, completion: nil)
+        playButton.isEnabled = false
+        recordButton.isEnabled = true
     }
     
 }
